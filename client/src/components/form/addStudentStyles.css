@@ -1,0 +1,9 @@
+.addStudentContainer{
+    margin: auto;
+    padding: 20px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+}

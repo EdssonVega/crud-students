@@ -1,9 +1,10 @@
 import './App.css';
+import { AddStudent } from './components/form/addStudent';
 
 function App() {
   return (
     <div className="App">
-      first commit
+      <AddStudent />
     </div>
   );
 }
