@@ -1,15 +1,16 @@
 const express = require("express");
 const app = express();
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const cors = require("cors");
 
 app.use(cors());
+app.use(express.json());
 
 const db = mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"",
-    database:"students"
+    database:"studentscrud"
 })
 
 app.post("/create",(req,res)=>{
@@ -18,7 +19,7 @@ app.post("/create",(req,res)=>{
     const school = req.body.school;
     const cellphone = req.body.cellphone;
 
-    db.query("INSERT INTO students(name,gender,school,cellphone) VALUES(?,?,?,?,?)",[name,gender,school,cellphone],
+    db.query("INSERT INTO students(name,gender,school,cellphone) VALUES(?,?,?,?)",[name,gender,school,cellphone],
     (err,result)=>{
         if (err) {
             console.log(err);
