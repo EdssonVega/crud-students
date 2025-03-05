@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
-import "./addStudentStyles.css"
+import React,{useState} from 'react';
+import "./addStudentStyles.css";
+import Axios from "axios";
 
 export const AddStudent = () => {
     const [name, setName] = useState("")
@@ -7,8 +8,19 @@ export const AddStudent = () => {
     const [school, setSchool] = useState(0)
     const [cellphone, setCellphone] = useState(0)
 
+    const registerStudent = () => {
+        Axios.post("http://localhost:3001/create",{
+            name:name,
+            gender:gender,
+            school:school,
+            cellphone:cellphone
+        }).then(()=>{
+            alert("student registered!");
+        })
+    }
+
   return (
-    <form action="" className="addStudentContainer">
+    <form onSubmit={registerStudent} className="addStudentContainer">
         <label htmlFor="name"> Name:</label>
         <input type="text" name="name" id="name" />
         <label htmlFor="gender"> Gender:</label>
