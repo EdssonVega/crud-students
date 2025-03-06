@@ -1,9 +1,81 @@
 .addStudentContainer{
-    margin: auto;
-    padding: 20px;
-    width: 30vw;
+    margin:20px auto;
+    width: 80vw;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 2px solid #c0bebe;
+    border-radius: 5px;
     align-items: center;
 }
+
+.addStudentContainer h1{
+    background-color: #f7f7f7;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 2px solid #c0bebe;
+    padding: 10px 0;
+}
+
+.inputsContainer{
+    width: 80%;
+    border: 2px solid #c0bebe;
+    margin: 10px 0;
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+}
+
+.inputsContainer label{
+    background-color: #eaebf0;
+    height: 100%;
+    padding: 0px 10px;
+    border-radius: 5px 0 0 5px;
+    border-right: 2px solid #c0bebe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputsContainer input{
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    padding: 0px 5px;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.inputsContainer input:focus {
+    border: 2px solid rgb(33, 64, 241);
+}
+
+.addStudentContainer button{
+    background-color: #178955;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.addStudentContainer button:hover{
+    background-color: #1ba064;
+}
+
+.divButtonContainer{
+    background-color: #f7f7f7;
+    text-align: center;
+    width: 100%;
+    border-radius:0 0 5px 5px;
+    font-weight: 600;
+    font-size: 24px;
+    border-top: 2px solid #c0bebe;
+    padding: 10px 0;
+}
+
+

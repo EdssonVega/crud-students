@@ -1,0 +1,18 @@
+table{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse; 
+
+}
+
+table thead{
+    font-weight: 600;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #e6e5e5;  /* Puedes cambiar este color */
+  }
+
+  td{
+    padding: 7px 5px;
+  }
