@@ -26,6 +26,12 @@ const cancelEdit = () => {
   setEdit(false)
 }
 
+const deleteStudent = (id) => {
+  Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
+    alert("student deleted!");
+  });
+};
+
 useEffect(() => {
   getStudents()
 }, [getStudentsList])
@@ -33,7 +39,7 @@ useEffect(() => {
   return (
     <div className="App">
       <AddStudent updateList={getStudents} getStudentForUpdate = {updatedStudent} setEdit={edit} cancelEdit={cancelEdit}/>
-      <StudentDisplayer sendList = {getStudentsList} updateInfo = {editInfo}/>
+      <StudentDisplayer sendList = {getStudentsList} updateInfo = {editInfo} deleteStudent={deleteStudent}/>
     </div>
   );
 }

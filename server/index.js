@@ -24,7 +24,7 @@ app.post("/create",(req,res)=>{
         if (err) {
             console.log(err);
         }else{
-            res.send("student registered succesfully!")
+            res.send(result)
         } 
     })
 })
@@ -53,7 +53,20 @@ app.put("/update",(req,res)=>{
         if (err) {
             console.log(err);
         }else{
-            res.send("student updated succesfully!")
+            res.send(result)
+        } 
+    })
+})
+
+app.delete("/delete/:id",(req,res)=>{
+    const id = req.params.id;
+
+    db.query("DELETE FROM students WHERE id=?",id,
+    (err,result)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.send(result)
         } 
     })
 })

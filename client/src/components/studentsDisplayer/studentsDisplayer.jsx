@@ -2,7 +2,7 @@ import Axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./studentsDisplayerStyles.css";
 
-export const StudentDisplayer = ({ sendList, updateInfo }) => {
+export const StudentDisplayer = ({ sendList, updateInfo, deleteStudent }) => {
 
   return (
     <table>
@@ -27,7 +27,7 @@ export const StudentDisplayer = ({ sendList, updateInfo }) => {
             <td className="tdButtonsContainer">
               <div>
                 <button onClick={()=> updateInfo(student.id)} className="updateButton">Update</button>
-                <button className="deleteButton">Delete</button>
+                <button className="deleteButton" onClick={()=> deleteStudent(student.id)}>Delete</button>
               </div>
             </td>
           </tr>
