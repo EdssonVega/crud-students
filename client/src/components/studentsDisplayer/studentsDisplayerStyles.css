@@ -14,5 +14,39 @@ tbody tr:nth-child(odd) {
   }
 
   td{
-    padding: 7px 5px;
+    
+    height: 40px;
+  }
+
+  .tdButtonsContainer div{
+        height: 80%;
+        display: flex;
+        width: fit-content;
+  }
+
+  .updateButton{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 3px 0 0 3px;
+    border: none;
+    padding: 0 7px;
+  }
+
+  .updateButton:hover{
+    background-color: rgb(35, 35, 240);
+  }
+
+  .deleteButton{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    border: none;
+    padding: 0 7px;
+  }
+
+  .deleteButton:hover{
+    background-color: rgb(252, 51, 51);
   }
