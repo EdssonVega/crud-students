@@ -41,6 +41,23 @@ app.get("/students",(req,res)=>{
     })
 })
 
+app.put("/update",(req,res)=>{
+    const id = req.body.id;
+    const name = req.body.name;
+    const gender = req.body.gender;
+    const school = req.body.school;
+    const cellphone = req.body.cellphone;
+
+    db.query("UPDATE students SET name=?,gender=?,school=?,cellphone=? WHERE id=?",[name,gender,school,cellphone,id],
+    (err,result)=>{
+        if (err) {
+            console.log(err);
+        }else{
+            res.send("student updated succesfully!")
+        } 
+    })
+})
+
 
 app.listen(3001,()=>{
     console.log("Corriendo en el puerto 3001")
